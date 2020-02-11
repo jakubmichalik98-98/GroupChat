@@ -1,0 +1,7 @@
+<h2>Prosze podac login i haslo</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Zaloguj</button>
+</form>
+
