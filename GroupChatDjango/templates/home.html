@@ -7,7 +7,7 @@
 {% if user.is_authenticated %}
     <p>{{ user.username }} jestes zalogowany na czacie</p>
 {% else %}
-    <p>Nie jestes zalogowany</p>
-    <a href="{% url 'login' %}">Zaloguj sie</a>
+    <b class="login_text">Nie jestes zalogowany</b>
+    <a class="login_link" href="{% url 'login' %}">Zaloguj sie</a>
 {% endif %}
 {% endblock %}
