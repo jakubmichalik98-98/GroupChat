@@ -44,4 +44,8 @@
         messageInputDom.value = '';
     };
 </script>
+{% if user.is_authenticated %}
+    <p>Jestes zalogowany {{ user.username }}</p>
+    <a href="{% url 'logout' %}">Wyloguj sie</a>
+{% endif %}
 </html>
