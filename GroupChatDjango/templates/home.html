@@ -1,12 +1,11 @@
 {% extends 'base.html' %}
 
-{% block title %} Main page{% endblock %}
+{% block title %} Strona glowna{% endblock %}
 
 {% block content %}
 
 {% if user.is_authenticated %}
-    <p>Jestes zalogowany {{ user.username }}</p>
-    <a href="{% url 'logout' %}">Wyloguj sie</a>
+    <p>{{ user.username }} jestes zalogowany na czacie</p>
 {% else %}
     <p>Nie jestes zalogowany</p>
     <a href="{% url 'login' %}">Zaloguj sie</a>
