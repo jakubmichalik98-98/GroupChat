@@ -1,0 +1,12 @@
+body{
+background-color: lightgreen;
+}
+
+.login_link{
+display:flex;
+justify-content: flex-end;
+}
+
+.login_text{
+display:flex;
+justify-content: center}
