@@ -1,8 +1,17 @@
 .msg-content{
-  border-radius: 25px;
-  background: blue;
-  padding: 20px;
-  width: 100px;
-  height: 10px;
+  color: darkmagenta
+}
 
+.link{
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+font-size: 15px;
+}
+
+.info{
+display: flex;
+justify-content: flex-end;
+align-items: flex-start;
+font-size: 15px;
 }
