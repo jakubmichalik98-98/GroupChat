@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <textarea id="chat-log" cols="100" rows="20"></textarea><br/>
+    <div id="chat-log"></div>
     <input id="chat-message-input" type="text" size="100"/><br/>
     <input id="chat-message-submit" type="button" value="Send"/>
 <script>
@@ -14,8 +14,11 @@
     chatSocket.onmessage = function(e) {
         var data = JSON.parse(e.data);
         var message = data['message'];
-        var sender = data['sender']
-        document.querySelector('#chat-log').value += (sender + ': ' + message + '\n');
+        var sender = data['sender'];
+        var newMsg = document.createElement("div");
+        newMsg.innerHTML = '<div class="sender"><b>' + sender +
+            '</b></div><div class="msg-content">' + message + '</div>';
+        document.querySelector('#chat-log').appendChild(newMsg);
     };
 
     chatSocket.onclose = function(e) {
@@ -39,6 +42,7 @@
         messageInputDom.value = '';
     };
 </script>
+
 {% if user.is_authenticated %}
     <p>Jestes zalogowany {{ user.username }}</p>
     <a href="{% url 'logout' %}">Wyloguj sie</a>
