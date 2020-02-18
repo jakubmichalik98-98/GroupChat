@@ -5,9 +5,14 @@ background-color: lightgreen;
 .login_link{
 display:flex;
 justify-content: flex-end;
+align-items: flex-start;
+font-size: 15px;
 }
 
 .login_text{
 display:flex;
-justify-content: center}
+justify-content: flex-end;
+align-items: flex-start;
+font-size: 15px
+}
 

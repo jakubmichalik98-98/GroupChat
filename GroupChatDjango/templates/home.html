@@ -2,12 +2,20 @@
 
 {% block title %} Strona glowna{% endblock %}
 
-{% block content %}
+{% block login %}
 
 {% if user.is_authenticated %}
     <p>{{ user.username }} jestes zalogowany na czacie</p>
 {% else %}
-    <b class="login_text">Nie jestes zalogowany</b>
-    <a class="login_link" href="{% url 'login' %}">Zaloguj sie</a>
+    <b class="login_text"> Nie jestes zalogowany</b>
+<a class="login_link" href="{% url 'login' %}">Zaloguj sie</a>
+{% endif %}
+{% endblock %}
+
+{% block content %}
+{% if user.is_authenticated %}
+    <p>{{ user.username }} Zapraszamy do korzystania </p>
+{% else %}
+    <p>{{ user.username }}Super Chat, zaloguj sie! </p>
 {% endif %}
 {% endblock %}
