@@ -1,5 +1,9 @@
 .msg-content{
-  color: darkmagenta
+  color: darkmagenta;
+  padding-bottom: 10px;
+
+.sender{
+color: darkblue;
 }
 
 .link{

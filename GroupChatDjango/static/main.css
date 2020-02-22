@@ -1,4 +1,8 @@
+html{
+    height:100%;
+}
 body{
+    height: 75%;
 background-color: lightgreen;
 }
 
@@ -29,5 +33,6 @@ justify-content: center;
 display: flex;
 justify-content: center;
 }
+
 
 
