@@ -16,5 +16,18 @@ align-items: flex-start;
 font-size: 15px
 }
 
+.super_chat{
+display: flex;
+justify-content: center;}
+
+.room_choose{
+display:flex;
+justify-content: center;
+}
+
+.user_desc{
+display: flex;
+justify-content: center;
+}
 
 

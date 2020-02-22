@@ -1,5 +1,9 @@
 {% extends "base.html" %}
 
+{% block description %}
+        Milego czatowania!
+        {% endblock %}
+
 {% block logout %}
 {% if user.is_authenticated %}
     <p class="info">Jestes zalogowany {{ user.username }}</p>
