@@ -36,7 +36,7 @@
         var newMsg = document.createElement("div");
         newMsg.innerHTML = '<div class="sender"><b>' + sender +
             '</b></div><div class="msg-content">' + message + '</div>';
-        document.querySelector('#chat-log').appendChild(newMsg);
+        document.querySelector('#chat-log').prepend(newMsg);
     };
 
     chatSocket.onclose = function(e) {
