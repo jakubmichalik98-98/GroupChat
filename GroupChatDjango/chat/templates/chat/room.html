@@ -33,9 +33,10 @@
         var data = JSON.parse(e.data);
         var message = data['message'];
         var sender = data['sender'];
+        var avatar = data["avatar"];
         var newMsg = document.createElement("div");
         newMsg.innerHTML = '<div class="sender"><b>' + sender +
-            '</b></div><div class="msg-content">' + message + '</div>';
+            '</b><img src="' + avatar + '"/></div><div class="msg-content">' + message + '</div>';
         document.querySelector('#chat-log').prepend(newMsg);
     };
 

@@ -6,10 +6,10 @@ from django.contrib.auth.forms import UserCreationForm
 class CustomUserCreationForm(UserCreationForm):
     class Meta(UserCreationForm.Meta):
         model = User
-        fields = UserCreationForm.Meta.fields
+        fields = UserCreationForm.Meta.fields + ("avatar",)
 
 def signup(request):
-    form = CustomUserCreationForm(request.POST)
+    form = CustomUserCreationForm(request.POST, request.FILES)
     if form.is_valid():
         form.save()
         return redirect("home")

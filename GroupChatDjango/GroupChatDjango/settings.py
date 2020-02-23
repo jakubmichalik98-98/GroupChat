@@ -138,3 +138,10 @@ STATICFILES_DIRS = [
 ]
 
 AUTH_USER_MODEL = "accounts.User"
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = "/media/"
+AVATAR_STORAGE_DIR = os.path.join(MEDIA_ROOT, 'avatars')
+AVATAR_AUTO_GENERATE_SIZES = (80,)
+AVATAR_THUMBS_FORMAT = "PNG"
+
