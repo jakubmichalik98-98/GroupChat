@@ -39,4 +39,11 @@ font-size: large;
 }
 
 
+.help_txt{
+max-height: 0;
+overflow: hidden;
+transition: all 0.5s ease-out;
+font-size:10px
+}
+
 
