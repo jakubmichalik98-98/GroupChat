@@ -8,11 +8,10 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = UserCreationForm.Meta.fields + ("avatar",)
 
+
 def signup(request):
     form = CustomUserCreationForm(request.POST, request.FILES)
     if form.is_valid():
         form.save()
         return redirect("home")
     return render(request, 'signup.html', {"form": form})
-
-
