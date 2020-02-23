@@ -14,7 +14,7 @@ constantly==15.1.0
 cryptography==2.8
 daphne==2.4.1
 Django==3.0.3
-django-channels==0.7.0
+django-avatar==5.0.0
 hiredis==1.0.1
 hyperlink==19.0.0
 idna==2.8

@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'accounts.apps.AccountsConfig',
     'django_extensions',
+    'avatar',
 ]
 
 MIDDLEWARE = [
@@ -134,5 +135,11 @@ CHANNEL_LAYERS = {
 }
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
+    os.path.join(BASE_DIR, "static")
 ]
+
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
+MEDIA_URL = "/media/"
+AVATAR_STORAGE_DIR = os.path.join(MEDIA_ROOT, 'avatars')
+AVATAR_AUTO_GENERATE_SIZES = (80,)
+AVATAR_THUMBS_FORMAT = "PNG"
