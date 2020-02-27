@@ -36,7 +36,7 @@
         var avatar = data["avatar"];
         var newMsg = document.createElement("div");
         newMsg.innerHTML = '<div class="sender"><b>' + sender +
-            '</b><img src="' + avatar + '"/></div><div class="msg-content">' + message + '</div>';
+            '</b><img class="avatar" src="' + avatar + '"/></div><div class="msg-content">' + message + '</div>';
         document.querySelector('#chat-log').prepend(newMsg);
     };
 
