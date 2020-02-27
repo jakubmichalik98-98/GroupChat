@@ -11,6 +11,7 @@ color: darkblue;
 width: 50%;
 max-width: 50px;
 padding: 5px;
+border-radius: 50%;
 }
 
 .link{
