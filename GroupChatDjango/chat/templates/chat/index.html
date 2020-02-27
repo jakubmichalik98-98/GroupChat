@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% load avatar_tags %}
+
 
 {% block description %}
         Wybor pokoju
@@ -24,14 +24,5 @@
         };
     </script>
 
-    <div class="avatar_changes">
-    <b>Czy chcialbys dodac swoj avatar?</b>
-    <div>
-        {% avatar user %}
-    </div>
-    <div>
-        <a href="{% url 'avatar_change' %}">Zmien swoj avatar</a>
-    </div>
-        </div>
 
 {% endblock %}
