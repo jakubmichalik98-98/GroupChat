@@ -10,8 +10,9 @@ color: darkblue;
 .avatar{
 width: 50%;
 max-width: 50px;
-padding: 5px;
 border-radius: 50%;
+vertical-align: middle;
+padding: 5px;
 }
 
 .link{
